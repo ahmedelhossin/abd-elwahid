@@ -12,7 +12,7 @@ export default function Conclusion({ content }: ConclusionProps) {
             title={content.ui.legacyStatement}
             muted
         >
-            <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm dark:border-stone-800 dark:bg-stone-900">
+            <div className="rounded-[2rem] border border-stone-200/80 bg-white/80 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-xl dark:border-stone-800 dark:bg-stone-900/80">
                 <p className="text-sm uppercase tracking-[0.25em] text-stone-500 dark:text-stone-400">
                     {content.ui.conclusion}
                 </p>

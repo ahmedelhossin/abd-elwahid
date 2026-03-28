@@ -18,7 +18,7 @@ export default function Architecture({
             muted
         >
             <div className="grid gap-6 lg:grid-cols-2">
-                <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm dark:border-stone-800 dark:bg-stone-900">
+                <div className="rounded-[2rem] border border-stone-200/80 bg-white/80 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-xl dark:border-stone-800 dark:bg-stone-900/80">
                     <p className="text-sm uppercase tracking-[0.25em] text-stone-500 dark:text-stone-400">
                         {content.ui.architectureOverview}
                     </p>
@@ -30,7 +30,7 @@ export default function Architecture({
                         {content.architectureTypes.map((item) => (
                             <div
                                 key={item.name}
-                                className="rounded-2xl border border-stone-200 bg-gradient-to-b from-stone-50 to-white p-5 dark:border-stone-800 dark:from-stone-900 dark:to-stone-950"
+                                className="rounded-2xl border border-stone-200/80 bg-gradient-to-b from-stone-50 to-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-200 hover:shadow-md dark:border-stone-800 dark:from-stone-900 dark:to-stone-950 dark:hover:border-amber-500/20"
                             >
                                 <h4 className="text-lg font-semibold">{item.name}</h4>
                                 <p className="mt-3 leading-7 text-stone-700 dark:text-stone-300">
@@ -41,7 +41,7 @@ export default function Architecture({
                     </div>
                 </div>
 
-                <div className="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm dark:border-stone-800 dark:bg-stone-900">
+                <div className="rounded-[2rem] border border-stone-200/80 bg-white/80 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:shadow-xl dark:border-stone-800 dark:bg-stone-900/80">
                     <p className="text-sm uppercase tracking-[0.25em] text-stone-500 dark:text-stone-400">
                         {content.ui.historicalStyles}
                     </p>
@@ -53,7 +53,7 @@ export default function Architecture({
                         {content.styleCards.map((style) => (
                             <div
                                 key={style}
-                                className="flex min-h-24 items-center justify-center rounded-2xl border border-stone-200 bg-stone-50 px-4 py-6 text-center text-sm font-medium text-stone-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-200"
+                                className="flex min-h-24 items-center justify-center rounded-2xl border border-stone-200/80 bg-stone-50 px-4 py-6 text-center text-sm font-medium text-stone-800 transition-all duration-300 hover:-translate-y-1 hover:border-amber-200 hover:bg-amber-50/60 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-200 dark:hover:border-amber-500/20 dark:hover:bg-amber-500/5"
                             >
                                 {style}
                             </div>
