@@ -121,9 +121,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
@@ -142,4 +144,77 @@
     background: color-mix(in oklab, var(--primary) 18%, white);
     color: var(--foreground);
   }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(255, 140, 0, 0.15);
+}
+
+.nav-item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff8c00;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-wrapper .nav-en,
+.nav-wrapper .nav-ar {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* default */
+.nav-wrapper .nav-ar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* when arabic */
+.nav-wrapper.ar .nav-en {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-wrapper.ar .nav-ar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%,
+      rgba(255, 140, 0, 0.15),
+      transparent 40%),
+    radial-gradient(circle at 80% 80%,
+      rgba(255, 120, 0, 0.1),
+      transparent 40%),
+    #0b0b0b;
 }
